@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<meta name="description" content="Swarnaa Vegetarian – Pure Veg Restaurant in Warje, Pune. Dine-in, drive-through & delivery. 4.1★ · 6000+ reviews."/>
+<title>Swarnaa Vegetarian | स्वर्णा व्हेजीटेरियन – Warje, Pune</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Lato:wght@300;400;700;900&family=Noto+Sans+Devanagari:wght@400;600&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --s:#D95F2B;--sd:#B84B1A;--g:#C8921A;--gl:#F0C040;
+  --cr:#FFF8EE;--cd:#F5ECD8;--gn:#1E3A28;--gm:#2E5A3A;
+  --br:#2C1508;--tx:#3A1F0D;--mt:#6B4C34;--wh:#FFFFFF;
+  --sh:rgba(44,21,8,.14);--r:14px;--rl:22px;
+  --ease:.32s cubic-bezier(.4,0,.2,1);
+}
+html{scroll-behavior:smooth}
+body{font-family:'Lato',sans-serif;background:var(--cr);color:var(--tx);overflow-x:hidden;line-height:1.65}
+::-webkit-scrollbar{width:5px}::-webkit-scrollbar-track{background:var(--cd)}::-webkit-scrollbar-thumb{background:var(--s);border-radius:10px}
+h1,h2,h3,h4{font-family:'Playfair Display',Georgia,serif;line-height:1.25}
+img{display:block;max-width:100%}a{text-decoration:none}
+
+/* NAV */
+.nav{position:fixed;top:0;left:0;right:0;z-index:900;display:flex;align-items:center;justify-content:space-between;padding:0 5%;height:68px;background:rgba(28,15,6,.94);backdrop-filter:blur(18px);border-bottom:1px solid rgba(200,146,26,.2);transition:background var(--ease),box-shadow var(--ease)}
+.nav.scrolled{background:rgba(28,15,6,.99);box-shadow:0 2px 20px rgba(0,0,0,.3)}
+.nav-brand .en{font-family:'Playfair Display',serif;color:var(--gl);font-size:1.06rem;font-weight:700;display:block}
+.nav-brand .hi{font-family:'Noto Sans Devanagari',sans-serif;color:var(--s);font-size:.68rem;display:block}
+.nav-links{display:flex;align-items:center;gap:1.7rem}
+.nav-links a{color:rgba(255,248,238,.8);font-size:.83rem;font-weight:700;letter-spacing:.8px;text-transform:uppercase;transition:color var(--ease);position:relative;padding-bottom:2px}
+.nav-links a::after{content:'';position:absolute;bottom:-2px;left:0;right:0;height:2px;background:var(--gl);transform:scaleX(0);transform-origin:right;transition:transform var(--ease)}
+.nav-links a:hover{color:var(--gl)}.nav-links a:hover::after{transform:scaleX(1);transform-origin:left}
+.nav-cta{background:var(--s)!important;color:#fff!important;padding:7px 18px!important;border-radius:50px!important}.nav-cta::after{display:none!important}.nav-cta:hover{background:var(--sd)!important}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
+.hamburger span{display:block;width:24px;height:2px;background:var(--cr);border-radius:2px;transition:var(--ease)}
+.hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.hamburger.open span:nth-child(2){opacity:0}
+.hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.mob{display:none;flex-direction:column;position:fixed;top:68px;left:0;right:0;background:rgba(28,15,6,.98);backdrop-filter:blur(20px);padding:1.5rem 5%;gap:1rem;z-index:899;border-bottom:1px solid rgba(200,146,26,.2)}
+.mob.open{display:flex}
+.mob a{color:rgba(255,248,238,.85);font-size:.95rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px;padding:.45rem 0;border-bottom:1px solid rgba(255,255,255,.06);transition:color var(--ease)}.mob a:hover{color:var(--gl)}
+
+/* HERO */
+.hero{min-height:100vh;position:relative;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden;padding:120px 5% 90px}
+.hbg{position:absolute;inset:0;background:linear-gradient(160deg,rgba(28,15,6,.78) 0%,rgba(28,15,6,.52) 50%,rgba(30,58,40,.72) 100%),url('https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=1800&q=85&fit=crop') center/cover no-repeat;transform:scale(1.06)}
+.hwave{position:absolute;bottom:-1px;left:0;right:0;height:90px;background:var(--cr);clip-path:ellipse(55% 100% at 50% 100%)}
+.hi{position:relative;z-index:2;max-width:760px}
+.hbadge{display:inline-flex;align-items:center;gap:8px;background:rgba(200,146,26,.18);border:1px solid rgba(200,146,26,.4);color:var(--gl);padding:6px 18px;border-radius:50px;font-size:.77rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:1.4rem;animation:fu .8s .1s both}
+.ldot{width:7px;height:7px;background:#3ECF5E;border-radius:50%;box-shadow:0 0 6px #3ECF5E;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+.hero h1{font-size:clamp(2.3rem,6vw,4.3rem);color:#fff;margin-bottom:.5rem;animation:fu .8s .25s both}
+.hero h1 em{color:var(--gl);font-style:italic}
+.hdeva{font-family:'Noto Sans Devanagari',sans-serif;color:rgba(255,248,238,.55);font-size:.98rem;margin-bottom:1.2rem;animation:fu .8s .35s both}
+.htag{font-size:clamp(.97rem,2.5vw,1.22rem);color:rgba(255,248,238,.88);font-weight:300;margin-bottom:2.4rem;animation:fu .8s .45s both;line-height:1.75}
+.htag strong{color:var(--gl);font-weight:700}
+.hbtns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;animation:fu .8s .6s both}
+.hstats{display:flex;justify-content:center;gap:2.5rem;margin-top:3rem;animation:fu .8s .78s both}
+.hstat .num{font-family:'Playfair Display',serif;font-size:1.55rem;font-weight:700;color:var(--gl);display:block}
+.hstat .lbl{font-size:.68rem;color:rgba(255,248,238,.6);letter-spacing:.5px;text-transform:uppercase}
+@keyframes fu{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+
+/* BUTTONS */
+.btn{display:inline-flex;align-items:center;gap:7px;padding:12px 26px;border-radius:50px;font-family:'Lato',sans-serif;font-size:.88rem;font-weight:700;letter-spacing:.4px;cursor:pointer;border:none;transition:transform .18s,box-shadow .2s,background .25s}
+.btn:hover{transform:translateY(-2px)}
+.btn-p{background:var(--s);color:#fff;box-shadow:0 4px 18px rgba(217,95,43,.4)}.btn-p:hover{background:var(--sd);box-shadow:0 7px 26px rgba(217,95,43,.55)}
+.btn-g{background:rgba(255,255,255,.12);color:#fff;border:1.5px solid rgba(255,255,255,.45)}.btn-g:hover{background:rgba(255,255,255,.22)}
+.btn-o{background:transparent;color:var(--s);border:2px solid var(--s)}.btn-o:hover{background:var(--s);color:#fff}
+.btn-sw{background:#FC8019;color:#fff}.btn-sw:hover{background:#e0710f}
+.btn-zm{background:#CB202D;color:#fff}.btn-zm:hover{background:#b01a26}
+.btn-wa{background:#25D366;color:#fff}.btn-wa:hover{background:#1ebe5d}
+
+/* SECTIONS */
+section{position:relative;z-index:1}
+.pad{padding:90px 5%}.pad-sm{padding:65px 5%}
+.inn{max-width:1100px;margin:0 auto}
+.slbl{display:inline-flex;align-items:center;gap:8px;color:var(--s);font-size:.74rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:.65rem}
+.slbl::before,.slbl::after{content:'';display:block;width:24px;height:1.5px;background:var(--s);opacity:.65}
+.stit{font-size:clamp(1.85rem,4.5vw,2.85rem);color:var(--br);margin-bottom:.75rem}
+.stit span{color:var(--s);font-style:italic}
+.sdesc{color:var(--mt);max-width:550px;font-size:.98rem;line-height:1.75}
+
+/* HIGHLIGHTS */
+.hl{background:var(--gn)}
+.hl-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:1.3rem;max-width:1100px;margin:0 auto}
+.hl-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:var(--r);padding:1.65rem 1.3rem;text-align:center;transition:background var(--ease),transform var(--ease)}
+.hl-card:hover{background:rgba(255,255,255,.11);transform:translateY(-4px)}
+.hl-ico{width:52px;height:52px;background:rgba(200,146,26,.2);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto .85rem;font-size:1.5rem}
+.hl-card h3{color:var(--gl);font-family:'Playfair Display',serif;font-size:.98rem;margin-bottom:.3rem}
+.hl-card p{color:rgba(255,248,238,.6);font-size:.82rem}
+
+/* ABOUT */
+.about{background:var(--cr)}
+.ag{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
+.aimgs{position:relative;height:480px}
+.aimg{position:absolute;border-radius:var(--rl);overflow:hidden;box-shadow:0 16px 50px var(--sh)}
+.aimg img{width:100%;height:100%;object-fit:cover}
+.am{width:72%;height:375px;top:0;left:0}.aa{width:52%;height:260px;bottom:0;right:0;border:4px solid var(--cr)}
+.abdg{position:absolute;bottom:62px;left:-8px;background:var(--gn);color:#fff;border-radius:var(--r);padding:.95rem 1.15rem;text-align:center;box-shadow:0 8px 26px rgba(0,0,0,.22);z-index:2}
+.abdg .num{font-family:'Playfair Display',serif;font-size:1.75rem;color:var(--gl);font-weight:700;display:block}
+.abdg .lb{font-size:.68rem;color:rgba(255,255,255,.65);text-transform:uppercase;letter-spacing:.4px}
+.alist{list-style:none;display:flex;flex-direction:column;gap:.72rem;margin:1.4rem 0 1.9rem}
+.alist li{display:flex;align-items:flex-start;gap:9px;color:var(--mt);font-size:.95rem}
+.alist li::before{content:'✦';color:var(--s);flex-shrink:0;margin-top:2px;font-size:.76rem}
+
+/* MENU */
+.menu-sec{background:var(--cd)}
+.menu-hdr{text-align:center;margin-bottom:2.2rem}
+.tabs{display:flex;gap:.7rem;overflow-x:auto;padding-bottom:4px;margin-bottom:2.6rem;scrollbar-width:none;justify-content:center;flex-wrap:wrap}
+.tabs::-webkit-scrollbar{display:none}
+.tab{padding:9px 22px;border-radius:50px;font-size:.84rem;font-weight:700;cursor:pointer;border:2px solid rgba(217,95,43,.25);background:transparent;color:var(--mt);white-space:nowrap;transition:all .22s;letter-spacing:.3px;font-family:'Lato',sans-serif}
+.tab.active,.tab:hover{background:var(--s);color:#fff;border-color:var(--s)}
+.mgrid{display:none;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:1.4rem;max-width:1100px;margin:0 auto;animation:fu .4s both}
+.mgrid.active{display:grid}
+
+/* MENU CARD */
+.mcard{background:var(--wh);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column;box-shadow:0 3px 16px var(--sh);transition:transform var(--ease),box-shadow var(--ease);cursor:pointer;position:relative;user-select:none;-webkit-user-select:none;-webkit-tap-highlight-color:transparent}
+.mcard:hover{transform:translateY(-5px);box-shadow:0 12px 36px var(--sh)}
+.mcard.held{transform:scale(.96);box-shadow:0 2px 8px var(--sh)}
+.mcard-img{height:168px;overflow:hidden;position:relative;background:var(--cd);flex-shrink:0}
+.mcard-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s;pointer-events:none}
+.mcard:hover .mcard-img img{transform:scale(1.08)}
+
+/* veg indicator */
+.vbdg{position:absolute;top:9px;left:9px;background:#fff;border:2.5px solid #3ECF5E;border-radius:4px;width:17px;height:17px;display:flex;align-items:center;justify-content:center;z-index:2;pointer-events:none}
+.vbdg::after{content:'';width:7px;height:7px;background:#3ECF5E;border-radius:50%}
+
+/* badge */
+.ptag{position:absolute;top:9px;right:9px;background:var(--s);color:#fff;font-size:.65rem;font-weight:700;padding:3px 9px;border-radius:50px;letter-spacing:.4px;text-transform:uppercase;z-index:2;pointer-events:none}
+
+/* tap hint overlay */
+.hint{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(to top,rgba(28,15,6,.7),transparent);color:rgba(255,255,255,.88);font-size:.63rem;font-weight:700;letter-spacing:.7px;text-transform:uppercase;text-align:center;padding:22px 0 8px;opacity:0;transition:opacity .3s;pointer-events:none;z-index:2}
+.mcard:hover .hint{opacity:1}
+
+/* hold progress ring */
+.hold-ring{position:absolute;bottom:9px;right:9px;width:28px;height:28px;opacity:0;transition:opacity .15s;pointer-events:none;z-index:3}
+.hold-ring svg{transform:rotate(-90deg);filter:drop-shadow(0 1px 3px rgba(0,0,0,.5))}
+.hold-ring circle{fill:none;stroke:#fff;stroke-width:3;stroke-dasharray:69;stroke-dashoffset:69;stroke-linecap:round}
+.mcard.holding .hold-ring{opacity:1}
+
+/* card body */
+.mcard-body{padding:.9rem 1rem 1rem;flex:1;display:flex;flex-direction:column}
+.mcard-name{font-family:'Playfair Display',serif;font-size:.97rem;color:var(--br);margin-bottom:4px;line-height:1.3}
+.mcard-desc{font-size:.78rem;color:var(--mt);line-height:1.5;margin-bottom:auto;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.mcard-foot{display:flex;align-items:center;justify-content:space-between;margin-top:.8rem;padding-top:.75rem;border-top:1px solid rgba(0,0,0,.07)}
+
+/* PRICE PILL in card */
+.price-pill{display:inline-flex;align-items:baseline;gap:1px;background:rgba(30,58,40,.09);border:1.5px solid rgba(30,58,40,.16);border-radius:50px;padding:4px 14px;line-height:1}
+.price-pill .psym{font-size:.68rem;font-weight:900;color:var(--gn);margin-top:1px}
+.price-pill .pamt{font-family:'Playfair Display',serif;font-size:1.08rem;font-weight:700;color:var(--gn)}
+.mcard-add{background:none;border:2px solid var(--s);color:var(--s);border-radius:50px;padding:5px 14px;font-size:.76rem;font-weight:700;cursor:pointer;transition:all .2s;font-family:'Lato',sans-serif}
+.mcard-add:hover{background:var(--s);color:#fff}
+
+/* MODAL OVERLAY */
+.overlay{position:fixed;inset:0;background:rgba(20,8,2,.87);z-index:2000;display:flex;align-items:center;justify-content:center;padding:16px;opacity:0;pointer-events:none;transition:opacity .28s ease;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.overlay.open{opacity:1;pointer-events:all}
+
+/* MODAL BOX */
+.modal{background:var(--wh);border-radius:var(--rl);overflow:hidden;max-width:520px;width:100%;box-shadow:0 32px 80px rgba(0,0,0,.5);transform:scale(.84) translateY(28px);transition:transform .32s cubic-bezier(.34,1.56,.64,1),opacity .28s ease;opacity:0;max-height:92vh;display:flex;flex-direction:column}
+.overlay.open .modal{transform:scale(1) translateY(0);opacity:1}
+
+/* MODAL IMAGE */
+.modal-img{height:275px;overflow:hidden;position:relative;flex-shrink:0;background:var(--cd)}
+.modal-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 8s ease}
+.overlay.open .modal-img img{transform:scale(1.04)}
+.modal-grad{position:absolute;inset:0;background:linear-gradient(to top,rgba(28,15,6,.78) 0%,rgba(28,15,6,.08) 55%,transparent 100%)}
+
+/* close button */
+.modal-close{position:absolute;top:14px;right:14px;width:36px;height:36px;background:rgba(28,15,6,.65);border:1.5px solid rgba(255,255,255,.2);border-radius:50%;color:#fff;font-size:1rem;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .2s;z-index:5;font-family:'Lato',sans-serif;font-weight:700}
+.modal-close:hover{background:rgba(28,15,6,.95)}
+
+/* image bottom row */
+.modal-img-row{position:absolute;bottom:16px;left:16px;right:16px;display:flex;align-items:center;justify-content:space-between;z-index:4;gap:10px}
+.modal-veg{background:#fff;border:2.5px solid #3ECF5E;border-radius:5px;width:22px;height:22px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.modal-veg::after{content:'';width:10px;height:10px;background:#3ECF5E;border-radius:50%}
+.modal-tag-el{background:var(--s);color:#fff;font-size:.7rem;font-weight:700;padding:4px 12px;border-radius:50px;letter-spacing:.4px;text-transform:uppercase}
+
+/* ── PRICE BADGE in modal — big & beautiful ── */
+.modal-price{display:inline-flex;align-items:stretch;border-radius:50px;overflow:hidden;box-shadow:0 4px 18px rgba(200,146,26,.55)}
+.mp-cur{background:rgba(0,0,0,.22);color:rgba(255,255,255,.92);font-family:'Lato',sans-serif;font-size:.78rem;font-weight:900;padding:8px 10px 8px 16px;display:flex;align-items:center;letter-spacing:.5px}
+.mp-num{font-family:'Playfair Display',serif;font-size:1.65rem;font-weight:700;color:var(--br);background:var(--gl);padding:5px 18px 5px 8px;display:flex;align-items:center;line-height:1}
+
+/* MODAL BODY */
+.modal-body{padding:1.5rem 1.8rem 2rem;overflow-y:auto;flex:1}
+.modal-cat-lbl{font-size:.7rem;color:var(--s);font-weight:700;letter-spacing:1.2px;text-transform:uppercase;margin-bottom:5px;display:flex;align-items:center;gap:7px}
+.modal-cat-lbl::before{content:'';width:18px;height:1.5px;background:var(--s);opacity:.65;display:block}
+.modal-item-name{font-family:'Playfair Display',serif;font-size:1.5rem;color:var(--br);margin-bottom:1rem;line-height:1.2}
+.modal-item-desc{color:var(--mt);font-size:.95rem;line-height:1.78;margin-bottom:1.3rem}
+.modal-chips{display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:1.5rem}
+.chip{background:rgba(217,95,43,.09);color:var(--s);border:1px solid rgba(217,95,43,.2);font-size:.7rem;font-weight:700;padding:4px 12px;border-radius:50px;letter-spacing:.3px}
+.modal-actions{display:flex;gap:.8rem;flex-wrap:wrap}
+.modal-actions .btn{flex:1;min-width:130px;justify-content:center}
+
+/* WHY */
+.why{background:var(--gn)}
+.why-hdr{text-align:center;margin-bottom:2.8rem}
+.why-hdr .stit{color:var(--cr)}.why-hdr .sdesc{color:rgba(255,248,238,.62);margin:0 auto}
+.why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:1.35rem}
+.wcard{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:var(--rl);padding:1.9rem 1.4rem;text-align:center;transition:background var(--ease),transform var(--ease)}
+.wcard:hover{background:rgba(255,255,255,.1);transform:translateY(-5px)}
+.wico{font-size:1.9rem;margin-bottom:.9rem;display:block}
+.wcard h3{font-family:'Playfair Display',serif;color:var(--gl);font-size:1rem;margin-bottom:.4rem}
+.wcard p{color:rgba(255,248,238,.58);font-size:.84rem}
+
+/* GALLERY */
+.gallery{background:var(--cr)}
+.galhdr{text-align:center;margin-bottom:2.4rem}
+.galgrid{display:grid;grid-template-columns:repeat(4,1fr);grid-template-rows:repeat(2,198px);gap:.9rem;max-width:1100px;margin:0 auto}
+.gi{border-radius:var(--r);overflow:hidden;position:relative;cursor:pointer}
+.gi img{width:100%;height:100%;object-fit:cover;transition:transform .55s,filter .5s}
+.gi:hover img{transform:scale(1.08);filter:brightness(.82)}
+.gi:nth-child(1){grid-column:span 2;grid-row:span 2}
+.gi:nth-child(4){grid-column:span 2}
+.govl{position:absolute;inset:0;background:rgba(28,15,6,0);display:flex;align-items:center;justify-content:center;transition:background .35s}
+.gi:hover .govl{background:rgba(28,15,6,.38)}
+.govl span{color:#fff;font-size:1.5rem;opacity:0;transform:scale(.6);transition:all .3s}
+.gi:hover .govl span{opacity:1;transform:scale(1)}
+
+/* REVIEWS */
+.reviews{background:var(--cd)}
+.rhdr{text-align:center;margin-bottom:2.8rem}
+.rsum{display:flex;align-items:center;justify-content:center;gap:2.5rem;margin-bottom:3rem;flex-wrap:wrap}
+.rbig{text-align:center}
+.rnum{font-family:'Playfair Display',serif;font-size:4.4rem;font-weight:700;color:var(--br);line-height:1}
+.rstars{color:#F5A623;font-size:1.25rem;letter-spacing:2px;display:block;margin:4px 0}
+.rcnt{color:var(--mt);font-size:.82rem}
+.rbars{flex:1;min-width:200px;max-width:330px;display:flex;flex-direction:column;gap:6px}
+.rrow{display:flex;align-items:center;gap:10px;font-size:.79rem;color:var(--mt)}
+.rlbl{min-width:28px;text-align:right}.rtrk{flex:1;height:6px;background:rgba(0,0,0,.08);border-radius:10px;overflow:hidden}
+.rfil{height:100%;background:#F5A623;border-radius:10px}.rpct{min-width:26px;font-size:.72rem}
+.rgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(272px,1fr));gap:1.4rem;max-width:1100px;margin:0 auto}
+.rcard{background:var(--wh);border-radius:var(--rl);padding:1.5rem;box-shadow:0 4px 18px var(--sh);border-left:4px solid var(--s);transition:transform var(--ease)}
+.rcard:hover{transform:translateY(-4px)}
+.rcard-stars{color:#F5A623;font-size:.95rem;letter-spacing:2px;margin-bottom:.72rem}
+.rcard-txt{color:var(--mt);font-size:.92rem;line-height:1.72;font-style:italic;margin-bottom:1rem}
+.rcard-auth{display:flex;align-items:center;gap:9px}
+.rav{width:38px;height:38px;border-radius:50%;background:var(--gn);display:flex;align-items:center;justify-content:center;color:var(--gl);font-weight:700;font-size:.86rem;flex-shrink:0}
+.rname{font-weight:700;font-size:.88rem;color:var(--br)}.rvia{font-size:.72rem;color:var(--mt)}
+
+/* ORDER */
+.order-sec{background:linear-gradient(135deg,var(--sd) 0%,var(--s) 58%,var(--g) 100%);text-align:center;padding:85px 5%;position:relative;overflow:hidden}
+.order-sec::before{content:'';position:absolute;width:420px;height:420px;background:rgba(255,255,255,.05);border-radius:50%;top:-160px;right:-80px}
+.order-sec::after{content:'';position:absolute;width:300px;height:300px;background:rgba(255,255,255,.05);border-radius:50%;bottom:-100px;left:-60px}
+.oinn{position:relative;z-index:1}
+.order-sec h2{font-family:'Playfair Display',serif;color:#fff;font-size:clamp(1.8rem,4vw,2.8rem);margin-bottom:.8rem}
+.osub{color:rgba(255,255,255,.84);font-size:1.04rem;margin-bottom:2.5rem;max-width:480px;margin-left:auto;margin-right:auto;line-height:1.7}
+.obtns{display:flex;gap:1.1rem;justify-content:center;flex-wrap:wrap;margin-bottom:1.9rem}
+.onote{color:rgba(255,255,255,.66);font-size:.8rem}
+
+/* CONTACT */
+.contact{background:var(--cr)}
+.cgrid{display:grid;grid-template-columns:1fr 1fr;gap:3.5rem;align-items:start}
+.cblocks{display:flex;flex-direction:column;gap:1.7rem}
+.cblk{display:flex;gap:.95rem;align-items:flex-start}
+.cico{width:44px;height:44px;background:rgba(217,95,43,.12);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0}
+.ctxt h4{font-family:'Playfair Display',serif;color:var(--br);font-size:.94rem;margin-bottom:3px}
+.ctxt p{color:var(--mt);font-size:.88rem;line-height:1.65}
+.ctxt a{color:var(--mt);font-size:.88rem;transition:color .2s}.ctxt a:hover{color:var(--s)}
+.htbl{display:grid;grid-template-columns:auto auto;gap:4px 16px}
+.dy{font-weight:700;color:var(--br);font-size:.82rem}.ti{color:var(--mt);font-size:.82rem}
+.mapw{border-radius:var(--rl);overflow:hidden;box-shadow:0 8px 36px var(--sh);height:350px}
+.mapw iframe{width:100%;height:100%;border:0;display:block}
+
+/* FOOTER */
+footer{background:var(--br);padding:62px 5% 30px}
+.fg{display:grid;grid-template-columns:2fr 1fr 1fr;gap:3rem;max-width:1100px;margin:0 auto 2.8rem}
+.fen{font-family:'Playfair Display',serif;font-size:1.25rem;color:var(--gl);display:block;margin-bottom:4px}
+.fhi{font-family:'Noto Sans Devanagari',sans-serif;color:var(--s);font-size:.76rem;display:block;margin-bottom:.95rem}
+.fbp{color:rgba(255,248,238,.5);font-size:.85rem;line-height:1.7;max-width:280px}
+.pvg{display:inline-flex;align-items:center;gap:6px;background:rgba(62,207,94,.12);border:1px solid rgba(62,207,94,.3);border-radius:50px;padding:4px 13px;color:#3ECF5E;font-size:.7rem;font-weight:700;letter-spacing:.4px;margin-top:1rem}
+.pvg::before{content:'';width:7px;height:7px;background:#3ECF5E;border-radius:50%;display:block}
+.fcol h4{font-family:'Playfair Display',serif;color:var(--gl);font-size:.92rem;margin-bottom:.95rem}
+.fcol ul{list-style:none;display:flex;flex-direction:column;gap:7px}
+.fcol ul li a{color:rgba(255,248,238,.5);font-size:.84rem;transition:color .2s}.fcol ul li a:hover{color:var(--gl)}
+.fbot{border-top:1px solid rgba(255,255,255,.08);padding-top:1.5rem;display:flex;justify-content:space-between;align-items:center;max-width:1100px;margin:0 auto;flex-wrap:wrap;gap:.5rem}
+.fbot p{color:rgba(255,248,238,.3);font-size:.77rem}.fbot a{color:rgba(255,248,238,.3)}
+
+/* WHATSAPP */
+.waf{position:fixed;bottom:26px;right:22px;z-index:950;width:56px;height:56px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,.48);transition:transform .2s,box-shadow .2s;animation:fu 1s 2s both}
+.waf:hover{transform:scale(1.1);box-shadow:0 7px 28px rgba(37,211,102,.65)}
+.watip{position:absolute;right:65px;background:#fff;color:var(--br);font-size:.74rem;font-weight:700;padding:6px 12px;border-radius:8px;white-space:nowrap;box-shadow:0 4px 14px rgba(0,0,0,.14);opacity:0;pointer-events:none;transition:opacity .2s;font-family:'Lato',sans-serif}
+.waf:hover .watip{opacity:1}
+.watip::after{content:'';position:absolute;right:-5px;top:50%;transform:translateY(-50%);border:5px solid transparent;border-right:none;border-left-color:#fff}
+
+/* REVEAL */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .65s ease,transform .65s ease}
+.rv.in{opacity:1;transform:translateY(0)}
+
+/* RESPONSIVE */
+@media(max-width:980px){
+  .ag{grid-template-columns:1fr}.aimgs{height:310px;margin-bottom:.8rem}
+  .am{width:65%;height:255px}.aa{width:50%;height:192px}
+  .galgrid{grid-template-columns:repeat(2,1fr);grid-template-rows:auto}
+  .gi:nth-child(1){grid-column:span 2;grid-row:span 1;height:210px}
+  .gi:nth-child(4){grid-column:span 2}.gi{height:185px}
+  .cgrid{grid-template-columns:1fr}
+  .fg{grid-template-columns:1fr 1fr}.fg>*:first-child{grid-column:span 2}
+}
+@media(max-width:680px){
+  .nav-links{display:none}.hamburger{display:flex}
+  .hstats{gap:1.3rem}
+  .galgrid{grid-template-columns:repeat(2,1fr)}
+  .fg{grid-template-columns:1fr}.fg>*:first-child{grid-column:span 1}
+  .fbot{flex-direction:column;text-align:center}
+  .abdg{left:0}.aimgs{height:252px}.am{width:67%;height:210px}.aa{width:52%;height:160px}
+  .modal{max-height:95vh}.modal-img{height:225px}
+  .modal-body{padding:1.2rem 1.4rem 1.6rem}
+  .modal-item-name{font-size:1.28rem}.mp-num{font-size:1.4rem}
+  .modal-actions{flex-direction:column}.modal-actions .btn{min-width:unset}
+}
+@media(max-width:480px){
+  .galgrid{grid-template-columns:1fr;grid-template-rows:auto}
+  .gi,.gi:nth-child(1),.gi:nth-child(4){grid-column:span 1;height:195px!important}
+  .hstats{flex-wrap:wrap;gap:1rem;justify-content:center}
+  .obtns{flex-direction:column;align-items:center}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <div class="nav-brand">
+    <span class="en">Swarnaa Vegetarian</span>
+    <span class="hi">स्वर्णा व्हेजीटेरियन · Warje, Pune</span>
+  </div>
+  <div class="nav-links">
+    <a href="#about">About</a>
+    <a href="#menu">Menu</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#contact">Contact</a>
+    <a href="#order" class="nav-cta">Order Now</a>
+  </div>
+  <button class="hamburger" id="ham" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="mob" id="mob">
+  <a href="#about" onclick="cm()">About</a>
+  <a href="#menu" onclick="cm()">Menu</a>
+  <a href="#gallery" onclick="cm()">Gallery</a>
+  <a href="#reviews" onclick="cm()">Reviews</a>
+  <a href="#contact" onclick="cm()">Contact</a>
+  <a href="#order" onclick="cm()">Order Now</a>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hbg" id="heroBg"></div>
+  <div class="hi">
+    <div class="hbadge"><span class="ldot"></span>Pure Vegetarian · Warje, Pune</div>
+    <h1>Swarnaa <em>Vegetarian</em></h1>
+    <p class="hdeva">स्वर्णा व्हेजीटेरियन – वारजे</p>
+    <p class="htag">Delicious <strong>Pure Veg Experience</strong> in Pune —<br/>Made with love, served with joy.</p>
+    <div class="hbtns">
+      <a href="#menu" class="btn btn-p">🍽 View Menu</a>
+      <a href="#order" class="btn btn-g">📦 Order Now</a>
+      <a href="#contact" class="btn btn-g">📍 Visit Us</a>
+    </div>
+    <div class="hstats">
+      <div class="hstat"><span class="num">4.1★</span><span class="lbl">Rating</span></div>
+      <div class="hstat"><span class="num">6000+</span><span class="lbl">Reviews</span></div>
+      <div class="hstat"><span class="num">₹200–400</span><span class="lbl">Per Person</span></div>
+      <div class="hstat"><span class="num">11 PM</span><span class="lbl">Open Till</span></div>
+    </div>
+  </div>
+  <div class="hwave"></div>
+</section>
+
+<!-- HIGHLIGHTS -->
+<section class="hl pad-sm">
+  <div class="hl-grid">
+    <div class="hl-card rv"><div class="hl-ico">🥗</div><h3>100% Hygienic</h3><p>Freshly prepared in a spotlessly clean kitchen every single day.</p></div>
+    <div class="hl-card rv"><div class="hl-ico">⚡</div><h3>Fast Service</h3><p>Quick dine-in, drive-through, and no-contact delivery options.</p></div>
+    <div class="hl-card rv"><div class="hl-ico">👨‍👩‍👧</div><h3>Family-Friendly</h3><p>A warm welcoming space loved by families across Warje.</p></div>
+    <div class="hl-card rv"><div class="hl-ico">🌿</div><h3>Pure Vegetarian</h3><p>100% plant-based kitchen — no eggs, no meat, ever.</p></div>
+    <div class="hl-card rv"><div class="hl-ico">💰</div><h3>Pocket Friendly</h3><p>Great food at honest prices — ₹200 to ₹400 per person.</p></div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about pad" id="about">
+  <div class="inn ag">
+    <div class="aimgs rv">
+      <div class="aimg am"><img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?w=700&q=80&fit=crop" alt="South Indian food" loading="lazy"/></div>
+      <div class="aimg aa"><img src="https://images.unsplash.com/photo-1606491956689-2ea866880c84?w=500&q=80&fit=crop" alt="Pav Bhaji" loading="lazy"/></div>
+      <div class="abdg"><span class="num">6K+</span><span class="lb">Happy Reviews</span></div>
+    </div>
+    <div class="rv">
+      <p class="slbl">Our Story</p>
+      <h2 class="stit">A <span>Taste of Home</span><br/>in the Heart of Warje</h2>
+      <p class="sdesc">Born from a simple belief that pure vegetarian food can be extraordinary, Swarnaa Vegetarian has become one of Pune's most-loved restaurants — earning 6,000+ glowing reviews and a loyal community in Giridhar Nagar, Warje.</p>
+      <ul class="alist">
+        <li>Freshly sourced ingredients every morning — no shortcuts, ever.</li>
+        <li>From sizzling South Indian dosas to hearty North Indian curries, all under one roof.</li>
+        <li>Highest hygiene standards — our kitchen is always inspection-ready.</li>
+        <li>Serving Warje families since day one with love and consistency.</li>
+        <li>Affordable pricing that never compromises on quality or taste.</li>
+      </ul>
+      <div style="display:flex;gap:1rem;flex-wrap:wrap">
+        <a href="#menu" class="btn btn-p">Explore Menu</a>
+        <a href="#contact" class="btn btn-o">Find Us</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MENU -->
+<section class="menu-sec pad" id="menu">
+  <div class="inn">
+    <div class="menu-hdr rv">
+      <p class="slbl">Full Menu</p>
+      <h2 class="stit">Something <span>for Everyone</span></h2>
+      <p class="sdesc" style="margin:0 auto">Click any dish to see full details. On mobile — tap and hold to preview. All items 100% vegetarian &amp; made fresh. 🌿</p>
+    </div>
+    <div class="tabs" style="margin-top:1.8rem">
+      <button class="tab active" onclick="st('si',this)">🥞 South Indian</button>
+      <button class="tab" onclick="st('ni',this)">🍲 North Indian</button>
+      <button class="tab" onclick="st('sn',this)">🥗 Snacks</button>
+      <button class="tab" onclick="st('ds',this)">🍮 Desserts</button>
+      <button class="tab" onclick="st('bv',this)">🥤 Beverages</button>
+    </div>
+    <div class="mgrid active" id="si"></div>
+    <div class="mgrid" id="ni"></div>
+    <div class="mgrid" id="sn"></div>
+    <div class="mgrid" id="ds"></div>
+    <div class="mgrid" id="bv"></div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section class="why pad">
+  <div class="inn">
+    <div class="why-hdr rv">
+      <p class="slbl" style="color:var(--gl)">Why Choose Us</p>
+      <h2 class="stit">What Makes Swarnaa <span style="color:var(--gl)">Special</span></h2>
+      <p class="sdesc" style="color:rgba(255,248,238,.62);margin:0 auto">We don't just serve food — we serve an experience you'll want to come back to.</p>
+    </div>
+    <div class="why-grid">
+      <div class="wcard rv"><span class="wico">🧼</span><h3>Hygienic Kitchen</h3><p>FSSAI compliant, spotlessly clean prep area with daily sanitisation routines.</p></div>
+      <div class="wcard rv"><span class="wico">⚡</span><h3>Quick Service</h3><p>From order to table in minutes — we respect your time always.</p></div>
+      <div class="wcard rv"><span class="wico">💚</span><h3>Affordable Pricing</h3><p>Quality food at neighbourhood prices. No compromise on taste whatsoever.</p></div>
+      <div class="wcard rv"><span class="wico">🍃</span><h3>Fresh Ingredients</h3><p>Locally sourced vegetables and spices, picked fresh every morning.</p></div>
+      <div class="wcard rv"><span class="wico">🌟</span><h3>Great Taste</h3><p>Recipes perfected over years — authentic flavours with a modern touch.</p></div>
+      <div class="wcard rv"><span class="wico">🚗</span><h3>Multiple Services</h3><p>Dine-in, drive-through, and no-contact delivery at your doorstep.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery pad" id="gallery">
+  <div class="inn">
+    <div class="galhdr rv"><p class="slbl">Gallery</p><h2 class="stit">A Feast <span>for the Eyes</span></h2><p class="sdesc" style="margin:0 auto">A glimpse of our food, ambiance, and the moments that make Swarnaa special.</p></div>
+    <div class="galgrid rv">
+      <div class="gi"><img src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=900&q=80&fit=crop" alt="Food spread" loading="lazy"/><div class="govl"><span>🍽</span></div></div>
+      <div class="gi"><img src="https://images.unsplash.com/photo-1668236543090-82eba5ee5976?w=450&q=80&fit=crop" alt="Masala Dosa" loading="lazy"/><div class="govl"><span>🥞</span></div></div>
+      <div class="gi"><img src="https://images.unsplash.com/photo-1606491956689-2ea866880c84?w=450&q=80&fit=crop" alt="Pav Bhaji" loading="lazy"/><div class="govl"><span>🫕</span></div></div>
+      <div class="gi"><img src="https://images.unsplash.com/photo-1517244683847-7456b63c5969?w=800&q=80&fit=crop" alt="Ambiance" loading="lazy"/><div class="govl"><span>✨</span></div></div>
+      <div class="gi"><img src="https://images.unsplash.com/photo-1617305855058-336d24456869?w=450&q=80&fit=crop" alt="Dessert" loading="lazy"/><div class="govl"><span>🍫</span></div></div>
+      <div class="gi"><img src="https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?w=450&q=80&fit=crop" alt="Dal" loading="lazy"/><div class="govl"><span>🌿</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews pad" id="reviews">
+  <div class="inn">
+    <div class="rhdr rv"><p class="slbl">Reviews</p><h2 class="stit">What Our <span>Guests Say</span></h2></div>
+    <div class="rsum rv">
+      <div class="rbig"><span class="rnum">4.1</span><span class="rstars">★★★★☆</span><span class="rcnt">Based on 6,000+ reviews</span></div>
+      <div class="rbars">
+        <div class="rrow"><span class="rlbl">5★</span><div class="rtrk"><div class="rfil" style="width:45%"></div></div><span class="rpct">45%</span></div>
+        <div class="rrow"><span class="rlbl">4★</span><div class="rtrk"><div class="rfil" style="width:32%"></div></div><span class="rpct">32%</span></div>
+        <div class="rrow"><span class="rlbl">3★</span><div class="rtrk"><div class="rfil" style="width:13%"></div></div><span class="rpct">13%</span></div>
+        <div class="rrow"><span class="rlbl">2★</span><div class="rtrk"><div class="rfil" style="width:6%"></div></div><span class="rpct">6%</span></div>
+        <div class="rrow"><span class="rlbl">1★</span><div class="rtrk"><div class="rfil" style="width:4%"></div></div><span class="rpct">4%</span></div>
+      </div>
+    </div>
+    <div class="rgrid">
+      <div class="rcard rv"><div class="rcard-stars">★★★★★</div><p class="rcard-txt">"Food quality, service, and hygiene is very good. The dosa is absolutely crispy and sambar is full of flavour. We visit every weekend as a family!"</p><div class="rcard-auth"><div class="rav">RP</div><div><p class="rname">Rohit Patil</p><p class="rvia">Google Review · Warje</p></div></div></div>
+      <div class="rcard rv"><div class="rcard-stars">★★★★★</div><p class="rcard-txt">"Best veg restaurant for families in Warje! The mushroom pav bhaji is absolutely unreal. Reasonably priced and the staff is always so friendly."</p><div class="rcard-auth"><div class="rav">SM</div><div><p class="rname">Sneha Marathe</p><p class="rvia">Google Review · Pune</p></div></div></div>
+      <div class="rcard rv"><div class="rcard-stars">★★★★☆</div><p class="rcard-txt">"Ordered through Swiggy and the food arrived hot and well-packed. Masala dosa was perfectly crispy even after delivery. Will order again!"</p><div class="rcard-auth"><div class="rav">AK</div><div><p class="rname">Aditya Kumar</p><p class="rvia">Swiggy Review</p></div></div></div>
+      <div class="rcard rv"><div class="rcard-stars">★★★★★</div><p class="rcard-txt">"The sizzling brownie is to die for! Very cosy, clean feel. Highly recommended for family outings in Warje."</p><div class="rcard-auth"><div class="rav">PD</div><div><p class="rname">Priya Deshmukh</p><p class="rvia">Zomato Review</p></div></div></div>
+      <div class="rcard rv"><div class="rcard-stars">★★★★★</div><p class="rcard-txt">"Consistent quality every visit. The Swarnaa Veg Thali is a complete meal at a great price. Love the ambiance and hygiene here."</p><div class="rcard-auth"><div class="rav">VJ</div><div><p class="rname">Vijay Joshi</p><p class="rvia">Google · Kothrud</p></div></div></div>
+      <div class="rcard rv"><div class="rcard-stars">★★★★☆</div><p class="rcard-txt">"Great for a quick lunch. Service is fast, food is fresh, menu has something for everyone. Masala papad as a starter is a must-try!"</p><div class="rcard-auth"><div class="rav">NS</div><div><p class="rname">Nisha Shah</p><p class="rvia">Google Review · Warje</p></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ORDER -->
+<section class="order-sec" id="order">
+  <div class="oinn">
+    <h2>Order Online — Fast &amp; Fresh 🚀</h2>
+    <p class="osub">Craving Swarnaa at home? Order on Swiggy or Zomato and get your favourite dishes delivered hot to your doorstep.</p>
+    <div class="obtns">
+      <a href="https://www.swiggy.com/search?query=Swarnaa+Vegetarian+Warje" target="_blank" rel="noopener" class="btn btn-sw">🛵 Order on Swiggy</a>
+      <a href="https://www.zomato.com/pune" target="_blank" rel="noopener" class="btn btn-zm">🍴 Order on Zomato</a>
+      <a href="https://wa.me/919421304001?text=Hi!%20I'd%20like%20to%20order%20from%20Swarnaa%20Vegetarian." target="_blank" rel="noopener" class="btn btn-wa">💬 WhatsApp Order</a>
+    </div>
+    <p class="onote">🚗 Drive-through available &nbsp;·&nbsp; 📦 No-contact delivery &nbsp;·&nbsp; ⏱ Est. 30–40 min</p>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact pad" id="contact">
+  <div class="inn">
+    <div class="rv" style="margin-bottom:2.8rem"><p class="slbl">Find Us</p><h2 class="stit">Come Visit <span>Swarnaa</span></h2></div>
+    <div class="cgrid">
+      <div class="cblocks rv">
+        <div class="cblk"><div class="cico">📍</div><div class="ctxt"><h4>Our Address</h4><p>Shop No L 18, Choudhary Heights,<br/>Sr No 130/2/1/1, Giridhar Nagar,<br/>Warje, Pune, Maharashtra 411058</p></div></div>
+        <div class="cblk"><div class="cico">📞</div><div class="ctxt"><h4>Phone</h4><a href="tel:+919421304001">+91 94213 04001</a></div></div>
+        <div class="cblk"><div class="cico">🕐</div><div class="ctxt"><h4>Opening Hours</h4><div class="htbl"><span class="dy">Mon – Fri</span><span class="ti">10:00 AM – 11:00 PM</span><span class="dy">Sat – Sun</span><span class="ti">9:00 AM – 11:00 PM</span><span class="dy">Holidays</span><span class="ti">9:00 AM – 11:00 PM</span></div></div></div>
+        <div class="cblk"><div class="cico">🚗</div><div class="ctxt"><h4>Services</h4><p>Dine-in · Drive-through · No-contact Delivery</p></div></div>
+        <div style="display:flex;gap:.9rem;flex-wrap:wrap;margin-top:.4rem">
+          <a href="https://maps.google.com/?q=Choudhary+Heights+Giridhar+Nagar+Warje+Pune+411058" target="_blank" rel="noopener" class="btn btn-p">📍 Get Directions</a>
+          <a href="tel:+919421304001" class="btn btn-o">📞 Call Now</a>
+        </div>
+      </div>
+      <div class="rv">
+        <div class="mapw">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.8447097895893!2d73.80638!3d18.49498!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bf5c49b55555%3A0x99c8b5cd37b3d7e0!2sWarje%2C%20Pune%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Swarnaa Map" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="fg">
+    <div>
+      <span class="fen">Swarnaa Vegetarian</span><span class="fhi">स्वर्णा व्हेजीटेरियन</span>
+      <p class="fbp">Pure vegetarian food made with love, served with warmth — in the heart of Warje, Pune. Bringing families together one delicious meal at a time.</p>
+      <div class="pvg">100% Pure Vegetarian</div>
+    </div>
+    <div class="fcol"><h4>Quick Links</h4><ul><li><a href="#about">About Us</a></li><li><a href="#menu">Our Menu</a></li><li><a href="#gallery">Gallery</a></li><li><a href="#reviews">Reviews</a></li><li><a href="#contact">Contact</a></li></ul></div>
+    <div class="fcol"><h4>Order Online</h4><ul><li><a href="https://www.swiggy.com" target="_blank" rel="noopener">Swiggy</a></li><li><a href="https://www.zomato.com" target="_blank" rel="noopener">Zomato</a></li><li><a href="https://wa.me/919421304001" target="_blank" rel="noopener">WhatsApp Order</a></li><li><a href="tel:+919421304001">Call to Order</a></li></ul></div>
+  </div>
+  <div class="fbot">
+    <p>© 2025 Swarnaa Vegetarian, Warje, Pune. All rights reserved.</p>
+    <p>Shop No L 18, Choudhary Heights · <a href="tel:+919421304001">+91 94213 04001</a></p>
+  </div>
+</footer>
+
+<!-- WHATSAPP -->
+<a class="waf" href="https://wa.me/919421304001?text=Hi!%20I'm%20interested%20in%20Swarnaa%20Vegetarian." target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  <span class="watip">Chat with us!</span>
+</a>
+
+<!-- MODAL -->
+<div class="overlay" id="overlay" role="dialog" aria-modal="true">
+  <div class="modal" id="modalEl">
+    <div class="modal-img">
+      <img id="mImg" src="" alt=""/>
+      <div class="modal-grad"></div>
+      <button class="modal-close" id="mClose">✕</button>
+      <div class="modal-img-row">
+        <div style="display:flex;align-items:center;gap:8px">
+          <div class="modal-veg"></div>
+          <span class="modal-tag-el" id="mTag"></span>
+        </div>
+        <div class="modal-price">
+          <span class="mp-cur">₹</span>
+          <span class="mp-num" id="mAmt">0</span>
+        </div>
+      </div>
+    </div>
+    <div class="modal-body">
+      <p class="modal-cat-lbl" id="mCat"></p>
+      <h3 class="modal-item-name" id="mName"></h3>
+      <p class="modal-item-desc" id="mDesc"></p>
+      <div class="modal-chips" id="mChips"></div>
+      <div class="modal-actions">
+        <a href="#order" class="btn btn-p" onclick="closeModal()">🛵 Order Now</a>
+        <a id="mWa" href="#" target="_blank" rel="noopener" class="btn btn-wa">💬 WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+/* ── NAV */
+const navEl=document.getElementById('nav');
+window.addEventListener('scroll',()=>navEl.classList.toggle('scrolled',scrollY>50),{passive:true});
+const hamEl=document.getElementById('ham'),mobEl=document.getElementById('mob');
+hamEl.addEventListener('click',()=>{hamEl.classList.toggle('open');mobEl.classList.toggle('open')});
+function cm(){hamEl.classList.remove('open');mobEl.classList.remove('open')}
+document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{
+  const t=document.querySelector(a.getAttribute('href'));
+  if(t){e.preventDefault();cm();t.scrollIntoView({behavior:'smooth',block:'start'})}
+}));
+
+/* ── PARALLAX */
+const hbgEl=document.getElementById('heroBg');
+window.addEventListener('scroll',()=>{if(scrollY<innerHeight*1.3)hbgEl.style.transform=`scale(1.06) translateY(${scrollY*.22}px)`},{passive:true});
+
+/* ── TABS */
+function st(id,btn){
+  document.querySelectorAll('.mgrid').forEach(g=>g.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(b=>b.classList.remove('active'));
+  document.getElementById(id).classList.add('active');btn.classList.add('active');
+}
+
+/* ── REVEAL */
+const ro=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      const sibs=[...e.target.parentElement.querySelectorAll('.rv')];
+      setTimeout(()=>e.target.classList.add('in'),sibs.indexOf(e.target)*70);
+      ro.unobserve(e.target);
+    }
+  });
+},{threshold:.1,rootMargin:'0px 0px -35px 0px'});
+document.querySelectorAll('.rv').forEach(el=>ro.observe(el));
+
+/* ══════════════════════════════════════════
+   MENU DATA
+   Every dish has a UNIQUE Unsplash image
+   matched accurately to the dish name
+══════════════════════════════════════════ */
+const MENU={
+  si:[
+    /* Masala Dosa — golden crispy crepe with potato */
+    {name:'Masala Dosa',price:110,cat:'South Indian',tag:'⭐ Bestseller',
+     img:'https://images.unsplash.com/photo-1668236543090-82eba5ee5976?w=700&q=85&fit=crop',
+     desc:'Golden crispy rice crepe filled with spiced potato masala, served with hot sambar, coconut chutney, and tomato chutney. The king of South Indian breakfast — made fresh on a cast-iron griddle every morning.',
+     chips:['Breakfast','Crispy','Must Try']},
+    /* Plain Dosa — thin crispy plain */
+    {name:'Plain Dosa',price:80,cat:'South Indian',
+     img:'https://images.unsplash.com/photo-1630383249896-424e482df921?w=700&q=85&fit=crop',
+     desc:'Thin, lacy, perfectly crisp plain dosa made from a fermented rice and lentil batter. Served with fresh coconut chutney and hot sambar. Simple yet deeply satisfying.',
+     chips:['Light','Crispy','Classic']},
+    /* Medu Vada — lentil fritters / donuts */
+    {name:'Medu Vada',price:90,cat:'South Indian',
+     img:'https://images.unsplash.com/photo-1589301760014-d929f3979dbc?w=700&q=85&fit=crop',
+     desc:'Perfectly crispy on the outside, soft and fluffy inside — these savory lentil donuts are a South Indian classic. Served with hot sambar and freshly ground coconut chutney.',
+     chips:['Crispy','Protein-rich','Classic']},
+    /* Idli Sambar — steamed rice cakes */
+    {name:'Idli Sambar',price:85,cat:'South Indian',
+     img:'https://images.unsplash.com/photo-1645177628172-a94c1f96debb?w=700&q=85&fit=crop',
+     desc:'Soft, pillow-like steamed rice cakes paired with a flavourful vegetable sambar and freshly ground coconut chutney. Light, nutritious, and utterly comforting.',
+     chips:['Light','Healthy','Steamed']},
+    /* Rava Dosa — semolina lacy crepe */
+    {name:'Rava Dosa',price:100,cat:'South Indian',
+     img:'https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=700&q=85&fit=crop',
+     desc:'A lacy, net-like instantly prepared crispy dosa made from semolina. Beautifully golden with a thin crackly texture and a slightly nutty aroma — a crowd absolute favourite.',
+     chips:['Instant','Crispy','Semolina']},
+    /* Onion Uttapam — thick pancake with onions */
+    {name:'Onion Uttapam',price:95,cat:'South Indian',
+     img:'https://images.unsplash.com/photo-1601050690597-df0568f70950?w=700&q=85&fit=crop',
+     desc:'A thick spongy rice pancake topped generously with caramelised onions, green chillies, and fresh coriander — griddled to golden perfection. Served with sambar and two chutneys.',
+     chips:['Thick','Savoury','Filling']},
+    /* Pongal — rice and lentil porridge */
+    {name:'Pongal',price:95,cat:'South Indian',
+     img:'https://images.unsplash.com/photo-1512058564366-18510be2db19?w=700&q=85&fit=crop',
+     desc:'Comforting rice and moong dal cooked to a creamy consistency, tempered with ghee, black pepper, cumin seeds, cashews and fragrant curry leaves. A Tamil Nadu temple classic.',
+     chips:['Comfort food','Ghee','Traditional']},
+    /* Mysore Masala Dosa — spicy with red chutney inside */
+    {name:'Mysore Masala Dosa',price:125,cat:'South Indian',tag:'🔥 Spicy',
+     img:'https://images.unsplash.com/photo-1596560548464-f010b3e26f76?w=700&q=85&fit=crop',
+     desc:'A bold upgrade on the classic masala dosa — generously spread with a spicy red garlic-chilli chutney before the potato masala is added, then folded and served sizzling hot on a banana leaf.',
+     chips:['Spicy','Bold','Karnataka Style']},
+    /* Pesarattu — green moong dal crepe */
+    {name:'Pesarattu',price:105,cat:'South Indian',
+     img:'https://images.unsplash.com/photo-1559847844-5315695dadae?w=700&q=85&fit=crop',
+     desc:'A nutritious green moong dal crepe from Andhra Pradesh — crispy, protein-packed, and mildly earthy in flavour. Served with ginger chutney and optional upma stuffing.',
+     chips:['Healthy','Protein-rich','Green Moong']},
+  ],
+  ni:[
+    /* Dal Makhani — black lentils overnight */
+    {name:'Dal Makhani',price:160,cat:'North Indian',tag:'❤️ Fan Fav',
+     img:'https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?w=700&q=85&fit=crop',
+     desc:'Slow-cooked whole black lentils and kidney beans simmered overnight in a rich, buttery tomato-cream gravy. The depth of flavour is extraordinary. Best enjoyed with butter naan.',
+     chips:['Rich','Slow-cooked','Must Try']},
+    /* Paneer Butter Masala — orange cream curry */
+    {name:'Paneer Butter Masala',price:190,cat:'North Indian',
+     img:'https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?w=700&q=85&fit=crop',
+     desc:'Soft cottage cheese cubes in a velvety, mildly spiced tomato-cashew-cream sauce. A restaurant classic that never disappoints — pairs beautifully with naan or jeera rice.',
+     chips:['Creamy','Mild','Classic']},
+    /* Kadai Paneer — bold spiced with peppers */
+    {name:'Kadai Paneer',price:195,cat:'North Indian',
+     img:'https://images.unsplash.com/photo-1631515243349-e0cb75fb8d3a?w=700&q=85&fit=crop',
+     desc:'Paneer cubes and colourful bell peppers tossed in a robust aromatic kadai masala with whole spices, tomato and onion. Bold, fragrant, and incredibly satisfying.',
+     chips:['Spiced','Aromatic','Bold']},
+    /* Palak Paneer — spinach green curry */
+    {name:'Palak Paneer',price:185,cat:'North Indian',
+     img:'https://images.unsplash.com/photo-1574484284002-952d92456975?w=700&q=85&fit=crop',
+     desc:'Tender paneer cubes bathed in a silky smooth spinach gravy, gently spiced with garlic, ginger and whole spices. A nutritious powerhouse that tastes as good as it looks.',
+     chips:['Healthy','Iron-rich','Spinach']},
+    /* Shahi Paneer — royal cream cashew */
+    {name:'Shahi Paneer',price:200,cat:'North Indian',tag:'👑 Premium',
+     img:'https://images.unsplash.com/photo-1588166524941-3bf61a9c41db?w=700&q=85&fit=crop',
+     desc:'Paneer cooked in a royal Mughlai-style gravy made with cream, cashews, saffron and aromatic spices. Rich, indulgent, and truly fit for a celebration.',
+     chips:['Royal','Creamy','Saffron']},
+    /* Swarnaa Veg Thali — full tray */
+    {name:'Swarnaa Veg Thali',price:220,cat:'North Indian',tag:'🍱 Best Value',
+     img:'https://images.unsplash.com/photo-1567337710282-00832b415979?w=700&q=85&fit=crop',
+     desc:'The ultimate complete meal — dal, seasonal sabzi, two rotis, steamed rice, raita, salad, pickle, and a sweet. Everything you need on one beautiful stainless steel tray.',
+     chips:['Complete Meal','Best Value','Daily Special']},
+    /* Jeera Rice — basmati with cumin */
+    {name:'Jeera Rice',price:100,cat:'North Indian',
+     img:'https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=700&q=85&fit=crop',
+     desc:'Long-grain basmati rice tempered with cumin seeds, bay leaf, and a generous drizzle of ghee. Simple, aromatic, and the perfect accompaniment for any curry.',
+     chips:['Aromatic','Basmati','Ghee']},
+    /* Butter Roti / Naan — flatbread */
+    {name:'Butter Roti / Naan',price:30,cat:'North Indian',
+     img:'https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=700&q=85&fit=crop',
+     desc:'Freshly made whole wheat roti or fluffy tandoor-style naan, slathered generously with butter. Baked to order — soft inside, lightly charred outside.',
+     chips:['Fresh','Buttery','Baked']},
+    /* Veg Biryani — fragrant layered rice */
+    {name:'Veg Biryani',price:175,cat:'North Indian',
+     img:'https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=700&q=85&fit=crop',
+     desc:'Fragrant long-grain basmati rice layered with saffron, caramelised onions, seasonal vegetables and whole aromatic spices. Served with cooling raita and a rich salan.',
+     chips:['Fragrant','Festive','Basmati']},
+    /* Malai Kofta — dumplings in cream sauce */
+    {name:'Malai Kofta',price:195,cat:'North Indian',
+     img:'https://images.unsplash.com/photo-1589302168068-964664d93dc0?w=700&q=85&fit=crop',
+     desc:'Melt-in-the-mouth soft cottage cheese and potato dumplings in a luxurious, mildly sweet tomato-cream gravy. A celebration dish that never fails to impress.',
+     chips:['Creamy','Indulgent','Dumplings']},
+  ],
+  sn:[
+    /* Pav Bhaji — Mumbai thick bhaji with pav */
+    {name:'Pav Bhaji',price:100,cat:'Snacks',tag:'🔥 Popular',
+     img:'https://images.unsplash.com/photo-1606491956689-2ea866880c84?w=700&q=85&fit=crop',
+     desc:'Thick, spicy mashed vegetable bhaji loaded with butter and cooked on a flat tawa until fragrant and smoky. Served with 2 soft toasted pav rolls, diced onion, and a wedge of lime.',
+     chips:['Street Food','Mumbai Style','Butter']},
+    /* Mushroom Pav Bhaji — mushroom variant */
+    {name:'Mushroom Pav Bhaji',price:120,cat:'Snacks',tag:'⭐ Signature',
+     img:'https://images.unsplash.com/photo-1547592166-23ac45744acd?w=700&q=85&fit=crop',
+     desc:'Our house specialty — earthy, smoky mushrooms elevate the classic pav bhaji to something truly extraordinary. A Swarnaa original that guests keep coming back for again and again.',
+     chips:['Signature','Smoky','Mushroom']},
+    /* Masala Papad — crispy papad with toppings */
+    {name:'Masala Papad',price:60,cat:'Snacks',
+     img:'https://images.unsplash.com/photo-1571081655559-56177e1b380b?w=700&q=85&fit=crop',
+     desc:'A crispy roasted papad topped with a vibrant salad of finely diced red onions, ripe tomatoes, fresh coriander, green chillies, and tangy chaat masala. The perfect light starter.',
+     chips:['Starter','Crispy','Light']},
+    /* Grilled Veg Sandwich — toasted golden */
+    {name:'Grilled Veg Sandwich',price:90,cat:'Snacks',
+     img:'https://images.unsplash.com/photo-1528736235302-52922df5c122?w=700&q=85&fit=crop',
+     desc:'Thick-cut bread stuffed with a colourful medley of vegetables, melted cheese and green mint chutney, pressed on a hot griddle until perfectly golden and beautifully crispy.',
+     chips:['Grilled','Cheese','Quick Bite']},
+    /* Samosa — fried triangular pastry */
+    {name:'Samosa (2 pcs)',price:50,cat:'Snacks',
+     img:'https://images.unsplash.com/photo-1601050690597-df0568f70950?w=700&q=85&fit=crop&crop=bottom',
+     desc:'Golden flaky pastry triangles filled with perfectly spiced potato and green peas, fried to a satisfying crisp. Served with sweet tamarind chutney and spicy green chutney.',
+     chips:['Fried','Classic','Street Food']},
+    /* Aloo Tikki Chaat — potato patty with toppings */
+    {name:'Aloo Tikki Chaat',price:80,cat:'Snacks',tag:'🌶 Tangy',
+     img:'https://images.unsplash.com/photo-1512058564366-18510be2db19?w=700&q=85&fit=crop&crop=right',
+     desc:'Crispy spiced potato patties topped with yogurt, sweet tamarind chutney, green chutney, sev, and pomegranate seeds. A burst of flavours and textures in every single bite.',
+     chips:['Chaat','Tangy','Street Food']},
+    /* Paneer Tikka — grilled marinated paneer */
+    {name:'Paneer Tikka',price:160,cat:'Snacks',tag:'🔥 Grilled',
+     img:'https://images.unsplash.com/photo-1561626423-a51b45aef0a1?w=700&q=85&fit=crop',
+     desc:'Juicy cottage cheese cubes marinated in a spiced yogurt mixture with colourful bell peppers and onions, grilled until beautifully charred and smoky. Served with mint chutney.',
+     chips:['Grilled','Starter','Smoky']},
+    /* Bhel Puri — puffed rice tossed with chutneys */
+    {name:'Bhel Puri',price:70,cat:'Snacks',
+     img:'https://images.unsplash.com/photo-1607487773280-0a5b0a1b4d94?w=700&q=85&fit=crop',
+     desc:'Mumbai-style puffed rice tossed with sev, chopped onions, tomatoes, fresh coriander, sweet and spicy chutneys, and a squeeze of fresh lime. Light, crunchy, and irresistibly tangy.',
+     chips:['Light','Mumbai Style','Crunchy']},
+  ],
+  ds:[
+    /* Sizzling Brownie — hot brownie on sizzler */
+    {name:'Sizzling Brownie',price:140,cat:'Desserts',tag:'🍫 Must Try',
+     img:'https://images.unsplash.com/photo-1617305855058-336d24456869?w=700&q=85&fit=crop',
+     desc:'A thick fudgy dark chocolate brownie served on a steaming hot cast-iron sizzler plate, topped with a generous scoop of vanilla ice cream that melts on contact — finished with warm chocolate sauce and crushed nuts.',
+     chips:['Hot & Cold','Chocolate','Indulgent']},
+    /* Gulab Jamun — dark brown syrup-soaked balls */
+    {name:'Gulab Jamun',price:70,cat:'Desserts',
+     img:'https://images.unsplash.com/photo-1548365328-8c6db3220e4c?w=700&q=85&fit=crop',
+     desc:'Soft melt-in-the-mouth khoya dumplings soaked in warm rose and cardamom-infused sugar syrup. Served warm — a timeless Indian classic that never fails to delight.',
+     chips:['Classic','Sweet','Warm']},
+    /* Matka Kulfi — clay pot frozen dessert */
+    {name:'Matka Kulfi',price:80,cat:'Desserts',
+     img:'https://images.unsplash.com/photo-1609167830220-7164aa360951?w=700&q=85&fit=crop',
+     desc:'Traditional dense creamy frozen dessert set in a small clay earthen pot. Choose from mango, pista, rose, or kesar-badam flavours — topped with crushed pistachios and rose petals.',
+     chips:['Traditional','Clay Pot','Frozen']},
+    /* Ice Cream Sundae — scoops with toppings */
+    {name:'Ice Cream Sundae',price:100,cat:'Desserts',
+     img:'https://images.unsplash.com/photo-1611329532992-0b7baab6f57e?w=700&q=85&fit=crop',
+     desc:'Two generous scoops of premium ice cream in your choice of flavour — topped with warm chocolate sauce, toasted mixed nuts, colourful sprinkles, and a bright red cherry on top.',
+     chips:['Cold','Customisable','Kids Fav']},
+    /* Ras Malai — chilled cottage cheese in cream */
+    {name:'Ras Malai',price:90,cat:'Desserts',
+     img:'https://images.unsplash.com/photo-1556040220-4096d522378d?w=700&q=85&fit=crop',
+     desc:'Soft cottage cheese patties soaked in chilled saffron-cardamom cream milk, garnished with crushed pistachios and dried rose petals. Elegant, chilled, and deeply indulgent.',
+     chips:['Chilled','Premium','Saffron']},
+    /* Gajar Halwa — carrot pudding */
+    {name:'Gajar Halwa',price:80,cat:'Desserts',tag:'❄️ Seasonal',
+     img:'https://images.unsplash.com/photo-1601050690597-df0568f70950?w=700&q=85&fit=crop&crop=top',
+     desc:'Slow-cooked shredded carrots in full-fat milk, sugar and ghee, garnished with slivered almonds and cashews. A beloved winter classic — warm, rich, and deeply comforting.',
+     chips:['Warm','Traditional','Winter Special']},
+    /* Mango Lassi — thick mango yogurt drink */
+    {name:'Mango Lassi',price:90,cat:'Desserts',tag:'🥭 Seasonal',
+     img:'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=700&q=85&fit=crop',
+     desc:'Thick creamy blended yogurt with fresh Alphonso mango pulp, lightly sweetened with sugar and a pinch of cardamom. Chilled and served tall — doubles up perfectly as dessert.',
+     chips:['Chilled','Mango','Refreshing']},
+  ],
+  bv:[
+    /* Masala Chai — Indian spiced tea */
+    {name:'Masala Chai',price:30,cat:'Beverages',
+     img:'https://images.unsplash.com/photo-1571934811356-5cc061b6821f?w=700&q=85&fit=crop',
+     desc:'Strong aromatic Indian spiced tea brewed with ginger, cardamom, cinnamon and black pepper, finished with full-fat milk and just the right amount of sugar. Soul in a cup.',
+     chips:['Hot','Spiced','Traditional']},
+    /* Filter Coffee — South Indian steel tumbler */
+    {name:'Filter Coffee',price:40,cat:'Beverages',tag:'☕ South Indian',
+     img:'https://images.unsplash.com/photo-1559925393-8be0ec4767c8?w=700&q=85&fit=crop',
+     desc:'Authentic South Indian decoction coffee — strong, aromatic, and poured from height to create a perfect froth. Served in a traditional steel tumbler and davara set.',
+     chips:['South Indian','Strong','Authentic']},
+    /* Fresh Lime Soda — lemon soda glass */
+    {name:'Fresh Lime Soda',price:50,cat:'Beverages',
+     img:'https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?w=700&q=85&fit=crop',
+     desc:'Freshly squeezed lime juice with chilled soda water — choose between sweet, salty, or masala versions. Perfectly refreshing on a hot Pune afternoon.',
+     chips:['Cold','Refreshing','Citrus']},
+    /* Rose Sharbat — pink floral drink */
+    {name:'Rose Sharbat',price:60,cat:'Beverages',
+     img:'https://images.unsplash.com/photo-1497534446932-c925b458314e?w=700&q=85&fit=crop',
+     desc:'Chilled rose syrup with milk and basil seeds (sabja). Cooling, fragrant, and strikingly beautiful — a traditional Indian summer cooler with a lovely floral aroma.',
+     chips:['Cold','Floral','Basil Seeds']},
+    /* Badam Milk — almond saffron warm milk */
+    {name:'Badam Milk',price:70,cat:'Beverages',
+     img:'https://images.unsplash.com/photo-1474625342403-e3f4f15b13be?w=700&q=85&fit=crop',
+     desc:'Warm or chilled full-fat milk enriched with saffron, cardamom, and finely ground almonds. Nourishing, fragrant, and deeply satisfying at any time of day.',
+     chips:['Nourishing','Saffron','Almonds']},
+    /* Jal Jeera — tangy spiced lemon drink */
+    {name:'Jal Jeera',price:45,cat:'Beverages',
+     img:'https://images.unsplash.com/photo-1551538827-9c037cb4f32a?w=700&q=85&fit=crop',
+     desc:'A tangy refreshing chilled drink made with roasted cumin, fresh mint, tamarind, black salt, and lime. A classic digestive cooler — popular and deeply satisfying after a big meal.',
+     chips:['Digestive','Tangy','Cumin']},
+    /* Cold Coffee — blended iced coffee */
+    {name:'Cold Coffee',price:65,cat:'Beverages',tag:'☕ Chilled',
+     img:'https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=700&q=85&fit=crop',
+     desc:'Blended chilled coffee with full-fat milk, sugar and crushed ice — thick, frothy, and deeply satisfying. A perfect afternoon pick-me-up on a hot Pune day.',
+     chips:['Cold','Blended','Creamy']},
+    /* Coconut Water — fresh natural drink */
+    {name:'Coconut Water',price:55,cat:'Beverages',
+     img:'https://images.unsplash.com/photo-1550189513-58d17ee66c37?w=700&q=85&fit=crop',
+     desc:'Fresh naturally sweet coconut water served chilled with the tender coconut malai (flesh) on the side. The ultimate natural refresher — pure, light, electrolyte-rich and hydrating.',
+     chips:['Natural','Hydrating','Fresh']},
+  ],
+};
+
+/* ══════════════════════════════════════════
+   BUILD MENU CARDS
+══════════════════════════════════════════ */
+Object.entries(MENU).forEach(([cat,items])=>{
+  const grid=document.getElementById(cat);
+  items.forEach(item=>{
+    const card=document.createElement('div');
+    card.className='mcard rv';
+    card.innerHTML=`
+      <div class="mcard-img">
+        <img src="${item.img}" alt="${item.name}" loading="lazy"/>
+        <div class="vbdg"></div>
+        ${item.tag?`<span class="ptag">${item.tag}</span>`:''}
+        <div class="hint">Click to view details</div>
+        <div class="hold-ring">
+          <svg viewBox="0 0 28 28" width="28" height="28">
+            <circle class="ring-circle" cx="14" cy="14" r="11"/>
+          </svg>
+        </div>
+      </div>
+      <div class="mcard-body">
+        <p class="mcard-name">${item.name}</p>
+        <p class="mcard-desc">${item.desc}</p>
+        <div class="mcard-foot">
+          <div class="price-pill"><span class="psym">₹</span><span class="pamt">${item.price}</span></div>
+          <button class="mcard-add" onclick="event.stopPropagation()">+ Add</button>
+        </div>
+      </div>`;
+
+    /* ── Click → open modal instantly ── */
+    card.addEventListener('click',()=>openModal(item));
+
+    /* ── Hold (desktop mousedown visual feedback) ── */
+    card.addEventListener('mousedown',()=>card.classList.add('held'));
+    card.addEventListener('mouseup',()=>card.classList.remove('held'));
+    card.addEventListener('mouseleave',()=>card.classList.remove('held'));
+
+    /* ── Touch hold: 500ms → open modal + ring animation ── */
+    let pressTimer=null;
+    const ringCircle=card.querySelector('.ring-circle');
+
+    function startHold(){
+      card.classList.add('holding');
+      ringCircle.style.transition='none';
+      ringCircle.style.strokeDashoffset='69';
+      requestAnimationFrame(()=>{
+        ringCircle.style.transition='stroke-dashoffset 500ms linear';
+        ringCircle.style.strokeDashoffset='0';
+      });
+      pressTimer=setTimeout(()=>{openModal(item);endHold();},500);
+    }
+    function endHold(){
+      clearTimeout(pressTimer);pressTimer=null;
+      card.classList.remove('holding','held');
+      ringCircle.style.transition='none';
+      ringCircle.style.strokeDashoffset='69';
+    }
+    card.addEventListener('touchstart',e=>{e.preventDefault();startHold();},{passive:false});
+    card.addEventListener('touchend',endHold);
+    card.addEventListener('touchmove',endHold);
+
+    grid.appendChild(card);
+  });
+});
+
+/* re-observe newly added .rv elements */
+document.querySelectorAll('.rv:not(.in)').forEach(el=>ro.observe(el));
+
+/* ══════════════════════════════════════════
+   MODAL
+══════════════════════════════════════════ */
+const overlayEl=document.getElementById('overlay');
+const mImgEl=document.getElementById('mImg');
+const mCatEl=document.getElementById('mCat');
+const mNameEl=document.getElementById('mName');
+const mAmtEl=document.getElementById('mAmt');
+const mTagEl=document.getElementById('mTag');
+const mDescEl=document.getElementById('mDesc');
+const mChipsEl=document.getElementById('mChips');
+const mWaEl=document.getElementById('mWa');
+
+function openModal(item){
+  /* load higher-res image */
+  mImgEl.src=item.img.replace('w=700','w=1000');
+  mImgEl.alt=item.name;
+  mCatEl.textContent=item.cat;
+  mNameEl.textContent=item.name;
+  mAmtEl.textContent=item.price;
+  mDescEl.textContent=item.desc;
+  if(item.tag){mTagEl.textContent=item.tag;mTagEl.style.display='inline-flex';}
+  else{mTagEl.style.display='none';}
+  mChipsEl.innerHTML=(item.chips||[]).map(c=>`<span class="chip">${c}</span>`).join('');
+  mWaEl.href=`https://wa.me/919421304001?text=Hi!%20I%27d%20like%20to%20order%20${encodeURIComponent(item.name)}%20(%E2%82%B9${item.price})%20from%20Swarnaa%20Vegetarian.`;
+  overlayEl.classList.add('open');
+  document.body.style.overflow='hidden';
+}
+function closeModal(){
+  overlayEl.classList.remove('open');
+  document.body.style.overflow='';
+  setTimeout(()=>{mImgEl.src='';},300);
+}
+document.getElementById('mClose').addEventListener('click',closeModal);
+overlayEl.addEventListener('click',e=>{if(e.target===overlayEl)closeModal();});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal();});
+</script>
+</body>
+</html>
